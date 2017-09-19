@@ -1,5 +1,8 @@
 FROM sameersbn/ubuntu:14.04.20170608
-MAINTAINER sameer@damagehead.com
+
+# Modified container form 
+# MAINTAINER sameer@damagehead.com
+# For use within GNS3
 
 ENV BIND_USER=bind \
     BIND_VERSION=1:9.9.5 \
@@ -17,5 +20,6 @@ COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 
 EXPOSE 53/udp 53/tcp 10000/tcp
+VOLUME ${DATA_DIR}
 ENTRYPOINT ["/sbin/entrypoint.sh"]
 CMD ["/usr/sbin/named"]
