@@ -1,7 +1,6 @@
 FROM sameersbn/ubuntu:14.04.20170608
 
-# Modified container form 
-# MAINTAINER sameer@damagehead.com
+# Modified container form sameer@damagehead.com
 # For use within GNS3
 
 ENV BIND_USER=bind \
